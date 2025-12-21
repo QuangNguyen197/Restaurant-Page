@@ -1,0 +1,254 @@
+*,
+*::before,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-dark: #850e35;
+  --primary-dark-hover: #6c0d2d;
+  --secondary-light: #fff5e4;
+}
+
+/* parkinsans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Parkinsans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/parkinsans-v2-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* parkinsans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Parkinsans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/parkinsans-v2-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  font-family: "Parkinsans";
+  min-height: 100vh;
+}
+
+button {
+  font-family: "Parkinsans";
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-dark);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+}
+
+header > img {
+  width: 3vw;
+  min-height: 60px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+nav > button {
+  font-size: 1.1rem;
+  background-color: var(--primary-dark);
+  border: none;
+  color: var(--secondary-light);
+  padding: 0.5rem 1.5rem;
+  align-self: center;
+}
+
+nav > button:hover {
+  background-color: var(--primary-dark-hover);
+  cursor: pointer;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+/* Home page */
+#home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#home-container > h1 {
+  font-family: "Parkinsans Bold";
+  font-size: 5.5rem;
+}
+
+#home-container > p {
+  font-size: 2rem;
+}
+
+#home-container > button {
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  border-radius: 6px;
+}
+
+#home-container > button:hover {
+  background-color: var(--primary-dark-hover);
+  cursor: pointer;
+}
+
+/* Menu */
+
+#menu-container {
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/contact-background.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 92px;
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#menu-container > h1 {
+  font-family: "Parkinsans Bold";
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+#menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.7rem;
+  border-radius: 6px;
+  background-color: var(--primary-dark);
+  padding: 1rem;
+  font-size: 1.5rem;
+  justify-self: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+}
+
+.card > p:first-of-type {
+  font-weight: bolder;
+}
+
+.card > p:not(:nth-child(2)) {
+  font-size: 1rem;
+}
+
+.card > img {
+  width: 100%;
+}
+
+/* About */
+#about-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 92px;
+  padding-left: 10rem;
+  padding-right: 55vw;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  gap: 1rem;
+}
+
+#about-container > * {
+  align-self: start;
+}
+
+#about-container > h1 {
+  font-family: "Parkinsans Bold";
+  font-size: 2.5rem;
+}
+
+#about-container > p {
+  font-size: 1.2rem;
+}
+
+#about-container > button {
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+#about-container > button:hover {
+  background-color: var(--primary-dark-hover);
+  cursor: pointer;
+}
+
+/* Contact */
+
+#contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/contact-background.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 92px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+#contact-container > div {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-dark);
+  border-radius: 6px;
+  padding: 2rem 3rem;
+  text-align: justify;
+}
+
+#contact-container > div > h1 {
+  font-size: 3rem;
+}
+
+#contact-container > div > p:nth-child(2) {
+  margin-top: 1rem;
+}
+
+#contact-container > div > p:nth-child(4),
+#contact-container > div > p:nth-child(6) {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
